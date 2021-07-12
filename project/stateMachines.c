@@ -3,7 +3,7 @@
 #include "led.h"
 #include "switches.h"
 
-char delay = 1, current_state = 0;
+char delay = 3, current_state = 0;
 
 void state_advance(){		/* change state */
 
