@@ -5,6 +5,10 @@ void turn_green_on();
 
 void turn_green_off();
 
+void turn_red_on();
+
+void turn_red_off();
+
 void state_advance();
 
 #endif // included
