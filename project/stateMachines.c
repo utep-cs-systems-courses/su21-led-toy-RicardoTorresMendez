@@ -38,8 +38,19 @@ void state_advance(){    /* alternate between toggling red & green */
 
   led_changed = changed;
   led_update();
-
-  
 }
+
+void green_on(){
+  green_on ^= 1;
+  led_changed = 1;
+  led_update();
+}
+
+void green_off(){
+  green_on &= 0;
+  led_changed = 1;
+  led_update();
+}
+
 
 
