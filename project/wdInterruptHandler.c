@@ -7,8 +7,10 @@ void __interrupt_vec(WDT_VECTOR) WDT(){  /* 250 interrupts/sec */
   
 
   if (++blink_count == 250){ 
-    turn_green_on();
-    blink_count = 0; }
+    turn_red_on();
+    blink_count = 0;
+  }
+
 }
 
 

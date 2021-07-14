@@ -52,5 +52,16 @@ void turn_green_off(){
   led_update();
 }
 
+void turn_red_on(){
+  red_on |= 1;
+  led_changed = 1;
+  led_update();
+}
+
+void turn_red_off(){
+  red_on &= 0;
+  led_changed = 1;
+  led_update();
+}
 
 
