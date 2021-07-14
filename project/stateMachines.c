@@ -41,25 +41,25 @@ void state_advance(){    /* alternate between toggling red & green */
 }
 
 void turn_green_on(){
-  green_on |= 1;
+  green_on = 1;
   led_changed = 1;
   led_update();
 }
 
 void turn_green_off(){
-  green_on &= 0;
+  green_on = 0;
   led_changed = 1;
   led_update();
 }
 
 void turn_red_on(){
-  red_on |= 1;
+  red_on = 1;
   led_changed = 1;
   led_update();
 }
 
 void turn_red_off(){
-  red_on &= 0;
+  red_on =0;
   led_changed = 1;
   led_update();
 }
