@@ -24,9 +24,9 @@ void switch_init(){			/* setup switch */
 
 void switch_interrupt_handler(){
   char p2val = switch_update_interrupt_sense();
-  switch_1_down = (p2val & SW4) ? 0 : 1; /* 0 when SW1 is up */
-  switch_2_down = (p2val & SW4) ? 0 : 1; /* 0 when SW2 is up */
-  switch_3_down = (p2val & SW4) ? 0 : 1; /* 0 when SW3 is up */
+  switch_1_down = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
+  switch_2_down = (p2val & SW2) ? 0 : 1; /* 0 when SW2 is up */
+  switch_3_down = (p2val & SW3) ? 0 : 1; /* 0 when SW3 is up */
   switch_4_down = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
   
   if( switch_4_down ){ state_advance(); }
