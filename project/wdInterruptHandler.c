@@ -9,7 +9,6 @@ void __interrupt_vec(WDT_VECTOR) WDT(){  /* 250 interrupts/sec */
 
   if (++blink_count == 250){
     blink_count = 0;
-    state_advance();
   }
 
 }

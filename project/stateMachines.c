@@ -8,9 +8,9 @@ void state_advance(){    /* alternate between toggling red & green */
   if( current_state < 3 ){ current_state++; }
   else{ current_state = 0; }
 
-  delay = current_state + 1; //dim light
+  delay = ( current_state * 2 ) + 1; //change dimness
 
-
+  
 
 }
 
