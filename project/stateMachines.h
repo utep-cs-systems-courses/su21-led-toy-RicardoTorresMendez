@@ -11,4 +11,6 @@ void turn_red_off();
 
 void state_advance();
 
+extern char current_state;
+
 #endif // included
