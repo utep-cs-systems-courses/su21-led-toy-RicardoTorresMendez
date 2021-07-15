@@ -31,7 +31,17 @@ void switch_interrupt_handler(){
   
   if( switch_4_down ){ state_advance(); }
 
+  /* start buzzing!!! */
+  if( switch_1_down ){ buzzer_set_period(100 + octave ); }
+  if( switch_2_down ){ buzzer_set_period(150 + octave ); }
+  if( switch_3_down ){ buzzer_set_period(200 + octave ); }
+
   if( switch_1_down || switch_2_down || switch_3_down ){ note_pressed = 1; }
-  else{ note_pressed = 0; }
+  else{
+    note_pressed = 0;
+    buzzer_set_period( 0 );
+  }
+
 
 }
+
