@@ -11,6 +11,6 @@ void turn_red_off();
 
 void state_advance();
 
-extern char current_state;
+extern char current_state, delay;
 
 #endif // included

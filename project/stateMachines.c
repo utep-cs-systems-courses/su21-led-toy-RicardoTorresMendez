@@ -2,7 +2,7 @@
 #include "stateMachines.h"
 #include "led.h"
 
-char current_state = 0;
+char current_state = 0, delay = 1;
 
 void state_advance(){    /* alternate between toggling red & green */
   if( current_state < 3 ){ current_state++; }
