@@ -3,7 +3,7 @@
 #include "led.h"
 #include "stateMachines.h"
 
-char switch_4_down; /* effectively boolean */
+char switch_1_down, switch_2_down, switch_3_down, switch_4_down; /* effectively boolean */
 
 static char 
 switch_update_interrupt_sense(){
@@ -24,7 +24,14 @@ void switch_init(){			/* setup switch */
 
 void switch_interrupt_handler(){
   char p2val = switch_update_interrupt_sense();
+  switch_1_down = (p2val & SW4) ? 0 : 1; /* 0 when SW1 is up */
+  switch_2_down = (p2val & SW4) ? 0 : 1; /* 0 when SW2 is up */
+  switch_3_down = (p2val & SW4) ? 0 : 1; /* 0 when SW3 is up */
   switch_4_down = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
   
   if( switch_4_down ){ state_advance(); }
+
+  if( switch_1_down || switch_2_down || switch_3_down ){ note_pressed = 1; }
+  else{ note_pressed = 0; }
+
 }

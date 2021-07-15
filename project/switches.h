@@ -11,6 +11,6 @@
 void switch_init();
 void switch_interrupt_handler();
 
-extern char switch_4_down; /* effectively boolean */
+extern char switch_1_down, switch_2_down, switch_3_down, switch_4_down; /* effectively boolean */
 
 #endif // included
