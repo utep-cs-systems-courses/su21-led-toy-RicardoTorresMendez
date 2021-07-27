@@ -17,7 +17,7 @@ octave:
 
 state_advance:
 
-	cmp #3, &current_state
+	cmp.b #3, &current_state
 	jge else
 	add.b #1, &current_state
 	jmp end
